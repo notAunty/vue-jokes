@@ -1,18 +1,16 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <new-jokes-component
-      active
-    ></new-jokes-component>
+  <q-page class="row justify-evenly">
+    <all-jokes-component />
   </q-page>
 </template>
 
 <script lang="ts">
-import NewJokesComponent from "components/NewJokesComponent.vue";
+import AllJokesComponent from "components/AllJokesComponent.vue";
 import { defineComponent, ref } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { NewJokesComponent },
+  components: { AllJokesComponent },
   setup() {},
   mounted: () => {},
 });

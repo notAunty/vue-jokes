@@ -2,7 +2,7 @@
   <div class="column justify-center" style="max-width: 600px">
     <h5 class="text-primary text-center">Cuz I have jokes to share</h5>
     <h6 class="joke-text text-center">{{ joke }}</h6>
-    <button class="new-joke-btn bg-accent" @click="addJoke">Add Joke</button>
+    <button class="new-joke-btn bg-primary" @click="addJoke">Add Joke</button>
   </div>
 </template>
 
@@ -22,9 +22,10 @@
   width: fit-content;
   border-radius: 8px;
   margin: 32px auto 0;
+  color: white;
 }
 .new-joke-btn:hover {
-  background-color: yellow;
+  background-color: darkblue !important;
 }
 </style>
 
@@ -37,12 +38,12 @@ import { mapActions, mapGetters } from "vuex";
 
 export default defineComponent({
   name: "NewJokesComponent",
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-  },
+  // props: {
+  //   title: {
+  //     type: String,
+  //     required: true,
+  //   },
+  // },
   methods: {
     ...mapActions("jokes", { addJoke: "fetchNewJoke" }),
   },
