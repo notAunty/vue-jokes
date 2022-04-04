@@ -1,9 +1,7 @@
 <template>
   <q-item
     clickable
-    tag="a"
-    :href="link"
-    :target="link.charAt(0) === '/' ? undefined : _blank"
+    v-on:click="goToPage"
   >
     <q-item-section
       v-if="icon"
@@ -22,11 +20,15 @@
 </template>
 
 <script lang="ts">
-
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'EssentialLink',
+  methods: {
+    goToPage: function () {
+      void this.$router.push(this.link);
+    }
+  },
   props: {
     title: {
       type: String,
