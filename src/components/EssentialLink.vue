@@ -2,8 +2,8 @@
   <q-item
     clickable
     tag="a"
-    target="_blank"
     :href="link"
+    :target="link.charAt(0) === '/' ? undefined : _blank"
   >
     <q-item-section
       v-if="icon"
