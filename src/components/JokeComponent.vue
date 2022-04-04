@@ -1,10 +1,14 @@
 <template>
   <q-card flat class="bg-primary card">
-    <p>{{joke}}</p>
+    <p class="joke-text">{{joke}}</p>
   </q-card>
 </template>
 
 <style scoped>
+.joke-text {
+  font-size: 1rem;
+}
+
 .card {
   border-radius: 8px;
   width: calc(50% - 8px);
