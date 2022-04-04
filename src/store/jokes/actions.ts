@@ -3,7 +3,9 @@ import { StateInterface } from '../index';
 import { JokesStateInterface } from './state';
 
 interface JokesInterface {
+  id: string;
   joke: string,
+  status: number,
 };
 
 const actions: ActionTree<JokesStateInterface, StateInterface> = {
